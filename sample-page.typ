@@ -2,7 +2,7 @@
 #import "/templates/my-template.typ": *
 
 #show: book-page.with(title: "Home")
-#show: template
+// #show: template
 
 = Home
 
