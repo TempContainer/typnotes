@@ -13,11 +13,6 @@ permissions:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-    # strategy:
-    #   matrix:
-    #     project:
-    #       - sicm
-    #       - opti
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -36,15 +31,15 @@ jobs:
       - name: Install Rust
         uses: dtolnay/rust-toolchain@stable
 
-      # - name: Download & install shiroa
-      #   run: |
-      #     curl -L https://github.com/Myriad-Dreamin/shiroa/releases/download/v0.2.0-nightly4/shiroa-x86_64-unknown-linux-gnu.tar.gz | tar -xvz
-      #     chmod +x shiroa-x86_64-unknown-linux-gnu/bin/shiroa
-      #     sudo cp shiroa-x86_64-unknown-linux-gnu/bin/shiroa /usr/bin/shiroa
+      - name: Download & install shiroa
+        run: |
+          curl -L https://github.com/Myriad-Dreamin/shiroa/releases/download/v0.2.0-nightly4/shiroa-x86_64-unknown-linux-gnu.tar.gz | tar -xvz
+          chmod +x shiroa-x86_64-unknown-linux-gnu/bin/shiroa
+          sudo cp shiroa-x86_64-unknown-linux-gnu/bin/shiroa /usr/bin/shiroa
       
       - name: Build Book
         run: |
-          cargo run --release --bin shiroa -- build --font-path ./assets/zh-fonts --font-path ./assets/fonts --path-to-root /typnotes/ -w .
+          shiroa build --font-path ./assets/zh-fonts --font-path ./assets/fonts --path-to-root /typnotes/ -w . dist
 
       - name: Setup Pages
         uses: actions/configure-pages@v3
