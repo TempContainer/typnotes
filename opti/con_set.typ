@@ -6,4 +6,13 @@
 
 = Hello, typst
 
-Sample page
+Sample page 中文测试.
+
+```cpp
+#include <iostream>
+
+int main() {
+  cout << "Hello World!\n";
+  return 0;
+}
+```
