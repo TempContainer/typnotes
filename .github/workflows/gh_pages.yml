@@ -28,9 +28,6 @@ jobs:
           mkdir -p assets/fonts
           curl -L https://github.com/Myriad-Dreamin/shiroa/releases/download/v0.1.2/font-assets.tar.gz | tar -xvz -C assets/fonts
 
-      - name: Install Rust
-        uses: dtolnay/rust-toolchain@stable
-
       - name: Download & install shiroa
         run: |
           curl -L https://github.com/Myriad-Dreamin/shiroa/releases/download/v0.2.0-nightly4/shiroa-x86_64-unknown-linux-gnu.tar.gz | tar -xvz
