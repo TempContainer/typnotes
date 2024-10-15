@@ -12,7 +12,7 @@ Sample page 中文测试.
 #include <iostream>
 
 int main() {
-  cout << "Hello World!\n";
+  std::cout << "Hello World!\n";
   return 0;
 }
 ```

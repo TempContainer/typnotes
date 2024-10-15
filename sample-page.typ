@@ -6,7 +6,7 @@
 
 = Home
 
-这个网站是博客的一部分, 用来记录数学和物理等带有大量公式的文章. 由于不想用 LaTeX 的冗杂语法写公式, 但同时 typst 也不支持 HTML 渲染, 只能出此权宜之计: 使用 #link("https://github.com/Myriad-Dreamin/shiroa")[shiroa] 将 typst 的结果导出为 SVG 并渲染为网页. 期待 typst 支持 HTML 导出的那一天, 届时将第一时间并入主站.
+这个网站是博客的一部分, 用来记录数学和物理等带有大量公式的文章. 由于不想用 TeX 的冗杂语法写公式, 但同时 typst 也不支持 HTML 渲染, 只能出此权宜之计: 使用 #link("https://github.com/Myriad-Dreamin/shiroa")[shiroa] 将 typst 的结果导出为 SVG 并渲染为网页. 期待 typst 支持 HTML 导出的那一天, 届时将第一时间并入主站.
 
 == Structure and Interpretation of Classical Mechanics
 

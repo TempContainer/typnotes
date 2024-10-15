@@ -1,5 +1,6 @@
 #import "@preview/physica:0.9.3": *
 #import "@preview/ctheorems:1.1.2": *
+#import "page.typ": is-web-target
 
 #let theorem = thmbox("theorem", "Theorem", fill: rgb("#e7e7e7"), padding: (top: 0em, bottom: 0em), base_level: 2)
 #let proposition = thmbox("theorem", "Proposition", fill: rgb("#e7e7e7"), padding: (top: 0em, bottom: 0em), base_level: 2)
@@ -34,10 +35,10 @@
 #let dvD = dv.with(d:$upright(D)$)
 
 #let template(doc) = {
-  // set text(
-  //   font: ("Linux Libertine", "Source Han Serif"), 
-  //   size: 12pt
-  // ) if not is-web-target
+  set text(
+    font: ("Linux Libertine", "Source Han Serif"), 
+    size: 12pt
+  ) if not is-web-target
   // set par(leading: 0.55em, /* first-line-indent: 2em,*/ justify: true)
   set heading(numbering: "1.1")
   // set page(numbering: "1")
