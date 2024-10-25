@@ -14,10 +14,6 @@
     #proof-bodyfmt(body)
   ]
 )
-#let wtf(w) = {
-  set text(red)
-  w
-}
 #let ii = {$upright(i)$}
 #let ee = {$upright(e)$}
 #let numeq(content) = math.equation(
@@ -26,6 +22,7 @@
     content,
 )
 
+#let ur(x) = math.upright(x)
 #let vz(x) = vb(math.upright(x))
 #let grad = $nabla$
 #let div = $nabla dot$
